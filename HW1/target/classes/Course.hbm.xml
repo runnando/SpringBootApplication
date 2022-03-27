@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.example.model.Course" table="course">
+
+        <id name="courseid">
+            <generator class="native" />
+        </id>
+
+        <property name="coursename"/>
+
+        <set name="students" table="student_course" inverse="true">
+            <key column="cid" />
+            <many-to-many class="org.example.model.Student" column="sid"/>
+        </set>
+    </class>
+</hibernate-mapping>
