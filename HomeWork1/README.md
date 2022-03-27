@@ -1,7 +1,5 @@
 # HW1
-- JavaScript
-- Node
-- NPM
-- Webpack
-- HTML
-- CSS
+## Built With
+- Maven
+- Hibernate
+- Mysql
